@@ -20,7 +20,7 @@ const Projects = () => {
             stack: "React, TypeScript, Express, Spotify Web API",
             desc: "'Hear Me Out' is a minimal, dark theme music player made with React, Typescript, Express.js, and Axios that lets you search and play sample songs using Spotify's Web API.",
             projectUrl: "https://hear-me-out-spotify-api.herokuapp.com/",
-            githubUrl: "https://github.com/PaytonDev/spotify-shop",
+            githubUrl: "https://github.com/PaytonDev/Hear-Me-Out",
         },
         // {
         //     heading: "My Website",
