@@ -30,8 +30,12 @@ const styles = makeStyles({
               color: 'rgb(214, 211, 211)'
             },
         },
+        color: 'rgb(214, 211, 211)'
     },
     inputLabel: {
+        color: 'rgb(214, 211, 211)'
+    },
+    input: {
         color: 'rgb(214, 211, 211)'
     },
     inputGrid: {
@@ -49,7 +53,7 @@ const styles = makeStyles({
     },
     formContainer: {
         textAlign: "center"
-    }
+    },
 })
 
 export default styles

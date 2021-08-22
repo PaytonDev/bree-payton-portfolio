@@ -25,7 +25,7 @@ const ContactForm = () => {
                     label="Full Name" 
                     required
                     className={classes.textField}
-                    InputProps={{ classes: {root: classes.root, focused: classes.focused, notchedOutline: classes.notchedOutline}}}
+                    InputProps={{ classes: {root: classes.root, focused: classes.focused, notchedOutline: classes.notchedOutline, input: classes.input}}}
                     InputLabelProps={{classes: {root: classes.inputLabel}, style: {color: 'rgb(214, 211, 211)'}}}
                 />
             </Grid>
@@ -39,7 +39,7 @@ const ContactForm = () => {
                     name="email" 
                     label="Email"
                     className={classes.textField}
-                    InputProps={{ classes: {root: classes.root, focused: classes.focused, notchedOutline: classes.notchedOutline}}}
+                    InputProps={{ classes: {root: classes.root, focused: classes.focused, notchedOutline: classes.notchedOutline, input: classes.input}}}
                     InputLabelProps={{classes: {root: classes.inputLabel}, style: {color: 'rgb(214, 211, 211)'}}}
                 />
                 <ValidationError
@@ -58,7 +58,7 @@ const ContactForm = () => {
                     rows={5}
                     label="Message" 
                     className={classes.textField}
-                    InputProps={{ classes: {root: classes.root, focused: classes.focused, notchedOutline: classes.notchedOutline}}}
+                    InputProps={{ classes: {root: classes.root, focused: classes.focused, notchedOutline: classes.notchedOutline, input: classes.input}}}
                     InputLabelProps={{classes: {root: classes.inputLabel}, style: {color: 'rgb(214, 211, 211)'}}}
                     >
                         
