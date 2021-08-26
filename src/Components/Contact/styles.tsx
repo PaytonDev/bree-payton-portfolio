@@ -16,6 +16,17 @@ const styles = makeStyles({
     },
     contactEmoji: {
         fontSize: 76
+    },
+    mailIcon: {
+        margin: 'auto 0',
+        display: "flex"
+    },
+    text: {
+        textAlign: 'center',
+    },
+    email: {
+        marginLeft: 15,
+        fontSize: 22
     }
 })
 
