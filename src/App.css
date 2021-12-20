@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
   height: 100%;
-  padding: 10px;
+  padding: 0;
+  color: "#d6d3d3";
 }
 
-section#skills svg {
-  height: 50px;
-  margin: 15px;
+.layout {
+  height: 100vh;
 }
 
 ul {
@@ -15,7 +15,12 @@ ul {
 }
 
 a {
-  color: rgb(214, 211, 211);
+  color: #d6d3d3;
+}
+
+section#skills svg {
+  height: 50px;
+  margin: 15px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -23,7 +28,6 @@ a {
     font-size: 64px;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   #hero-text {
@@ -34,7 +38,6 @@ a {
     height: 25px;
   }
 }
-
 
 @media only screen and (max-width: 600px) {
   #hero-text {

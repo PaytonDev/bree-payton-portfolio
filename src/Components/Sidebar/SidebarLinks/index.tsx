@@ -1,44 +1,48 @@
-import {List, ListItem, ListItemText} from '@material-ui/core'
+import { List, ListItem } from "@material-ui/core";
+import { NavButton } from "./NavButton";
+import { Link } from "react-router-dom";
 
-import styles from "./styles"
+import styles from "./styles";
 
-type SidebarLinksProps = {
-    scrollFunction: (name: string) => void
-}
+const SidebarLinks = () => {
+  const classes = styles();
 
-const SidebarLinks = (props: SidebarLinksProps) => {
-    const classes = styles()
+  const navLinks = [
+    {
+      text: "Home",
+      url: "/",
+    },
+    {
+      text: "Projects",
+      url: "projects",
+    },
+    {
+      text: "Resume",
+      url: "resume",
+    },
+    {
+      text: "Skills",
+      url: "skills",
+    },
+    {
+      text: "Contact",
+      url: "contact",
+    },
+  ];
 
-    const navLinks = [
-        {
-            title: 'Home',
-            link: '#Home'
-        },
-        {
-            title: 'Projects',
-            link: '#Projects'
-        },
-        {
-            title: 'Skills',
-            link: '#Skills'
-        },
-        {
-            title: 'Contact',
-            link: '#Contact'
-        }
-    ]
+  return (
+    <List className={classes.list}>
+      {navLinks.map((link, idx) => {
+        return (
+          <ListItem component="div" key={idx} className={classes.link}>
+            <Link to={link.url} color="inherit" className={classes.linkText}>
+              <NavButton>{link.text}</NavButton>
+            </Link>
+          </ListItem>
+        );
+      })}
+    </List>
+  );
+};
 
-
-    return (
-        <List className={classes.list}>
-            {navLinks.map((link, idx) => {
-                return (
-                <ListItem component='a' href={link.link} key={idx} className={classes.link} onClick={() => props.scrollFunction(link.link)}>
-                    <ListItemText primary={link.title} classes={{primary: classes.linkText}} color='inherit'/>
-                </ListItem>
-            )})}
-        </List>
-    )
-}
-
-export default SidebarLinks
+export default SidebarLinks;

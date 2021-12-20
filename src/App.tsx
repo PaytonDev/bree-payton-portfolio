@@ -1,48 +1,28 @@
-import React, { useState } from 'react';
-import Fab from '@material-ui/core/Fab';
-import { Fade, useMediaQuery } from '@material-ui/core';
-import { ArrowUpward } from '@material-ui/icons';
-import NavBar from './Components/NavBar';
-import Hero from "./Components/Hero"
-import Projects from './Components/Projects';
-import Skills from './Components/Skills'
-import Contact from './Components/Contact';
-import Sidebar from './Components/Sidebar';
-import styles from "./styles"
-import './App.css';
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Hero from "./Components/Hero";
+import Projects from "./Components/Projects";
+import Skills from "./Components/Skills";
+import Contact from "./Components/Contact";
+import Sidebar from "./Components/Sidebar";
+import "./App.css";
+import { Grid } from "@material-ui/core";
 
 function App() {
-  const [fabVisible, setFabVisible] = useState(false)
-  const classes = styles()
-  const tablet = useMediaQuery('(max-width: 768px)')
-  
-
-  const scrollToView = (name: string) => (
-    document.querySelector(`#${name}`)?.scrollIntoView({
-        behavior: 'smooth'
-    })
-  )
-
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-
-    scrolled > 300 ? setFabVisible(true) : setFabVisible(false)
-  }
-
-  window.addEventListener('scroll', toggleVisible)
-
   return (
     <div className="App">
-      {tablet ? <Sidebar/> : <NavBar/>}
-      <Hero/>
-      <Projects />
-      <Skills />
-      <Contact />
-      <Fade in={fabVisible}>
-        <Fab color="inherit" aria-label="scroll to top" className={classes.fab} onClick={() => {scrollToView(tablet ? 'Sidebar' : 'NavBar')}}>
-          <ArrowUpward className={classes.fabIcon}/>
-        </Fab>
-      </Fade>
+      <HashRouter basename="/">
+        <Grid container justifyContent="space-between" alignItems="stretch" className="layout">
+          <Sidebar />
+          <Grid item md={10} component="main">
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="skills" element={<Skills />} />
+              <Route path="contact" element={<Contact />} />
+            </Routes>
+          </Grid>
+        </Grid>
+      </HashRouter>
     </div>
   );
 }

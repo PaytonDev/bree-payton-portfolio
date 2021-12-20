@@ -1,30 +1,23 @@
-import { Grid, Link } from "@material-ui/core";
-import styles from "./styles"
-
+import { Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import styles from "./styles";
 
 type NavLinksProps = {
-    text: string
-    url: string
-}
+  text: string;
+  url: string;
+};
 
 const NavLink = (props: NavLinksProps) => {
-    const scrollToView = (name: string) => (
-        document.querySelector(`#${name}`)?.scrollIntoView({
-            behavior: 'smooth'
-        })
-    )
+  const classes = styles();
 
-    const classes = styles()
+  return (
+    <Grid item>
+      <Link to={props.url} className={classes.links}>
+        {console.log(props.url)}
+        {props.text}
+      </Link>
+    </Grid>
+  );
+};
 
-    return (
-        <Grid item>
-            <Link href={props.url} 
-                className={classes.links}
-                onClick={() => {scrollToView(props.text)}}>
-                {props.text}
-            </Link>
-        </Grid>
-    )
-}
-
-export default NavLink
+export default NavLink;
