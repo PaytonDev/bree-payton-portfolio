@@ -12,5 +12,10 @@ export const NavButton = withStyles({
     height: "80px",
     borderRadius: 0,
     boxShadow: "6px 6px 1px 0px #D6D3D3",
+    "&:hover": {
+      color: "#000",
+      backgroundColor: "#FFF",
+      boxShadow: "none",
+    },
   },
 })(Button);

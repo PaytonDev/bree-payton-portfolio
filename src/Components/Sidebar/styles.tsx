@@ -8,6 +8,7 @@ const styles = makeStyles({
   paper: {
     background: "black",
     border: "1px solid #fff",
+    maxHeight: "100vh",
   },
   sidebarHeader: {
     color: "rgb(214, 211, 211)",
@@ -18,8 +19,17 @@ const styles = makeStyles({
     float: "left",
   },
   avatarPhoto: {
-    height: "200px",
-    width: "200px",
+    maxHeight: "200px",
+    maxWidth: "200px",
+    height: "100%",
+    width: "100%",
+  },
+  avatarContainer: {
+    marginBottom: "1.25em",
+  },
+  socialLink: {
+    color: "inherit",
+    cursor: "pointer",
   },
 });
 
