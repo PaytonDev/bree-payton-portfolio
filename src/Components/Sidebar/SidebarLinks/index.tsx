@@ -17,10 +17,6 @@ const SidebarLinks = () => {
       url: "projects",
     },
     {
-      text: "Resume",
-      url: "resume",
-    },
-    {
       text: "Skills",
       url: "skills",
     },
@@ -41,6 +37,16 @@ const SidebarLinks = () => {
           </ListItem>
         );
       })}
+      <ListItem component="div" key="resume" className={classes.link}>
+        <a
+          href="https://drive.google.com/file/d/1P913NwGISs_tKyczuEF8DGxQbO8tOu9-/view?usp=sharing"
+          className={classes.linkText}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <NavButton>Resume</NavButton>
+        </a>
+      </ListItem>
     </List>
   );
 };
