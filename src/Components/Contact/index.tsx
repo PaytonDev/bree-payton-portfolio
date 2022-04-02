@@ -5,10 +5,17 @@ import styles from "./styles";
 const Contact = () => {
   const classes = styles();
 
+  const calendlySettings = {
+    backgroundColor: "080808",
+    hideEventTypeDetails: true,
+    primaryColor: "FDD641",
+    textColor: "ffffff",
+  };
+
   return (
     <section id="Contact" className={classes.formContainer}>
       <header className={classes.header}>Contact</header>
-      <InlineWidget url="https://calendly.com/breeana-payton/30min?month=2021-12" />
+      <InlineWidget pageSettings={calendlySettings} url="https://calendly.com/breeana-payton/" />
     </section>
   );
 };

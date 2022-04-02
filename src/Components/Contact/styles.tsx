@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 const styles = makeStyles({
   formContainer: {
-    height: "100vh",
+    height: "90vh",
   },
   header: {
     fontSize: 48,
