@@ -54,7 +54,7 @@ const Hero = () => {
               <Button
                 className={classes.button}
                 variant="outlined"
-                href="https://drive.google.com/file/d/1P913NwGISs_tKyczuEF8DGxQbO8tOu9-/view?usp=sharing"
+                href="https://docs.google.com/document/d/1WvQkP8JxqTqDpqm9lX4cCDlfiAvc1SlvPrx4VWiYsBA/edit?usp=sharing"
                 target="_blank"
                 size="large"
               >
